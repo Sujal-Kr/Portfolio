@@ -5,13 +5,16 @@ import './Contact.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 function Contact() {
     const [name,setName] = useState('')
     const [mail,setMail] = useState('')
     const [msg,setMsg] = useState('')
     
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
+       
+        console.log(data)
         toast.success('message sent!', {
             position: toast.POSITION.TOP_RIGHT,
             autoClose: 1000,
