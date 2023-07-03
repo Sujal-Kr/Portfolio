@@ -1,0 +1,19 @@
+.project{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.desc{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.8;
+    
+    transition: all linear 0.4s;
+}
+ @media screen and (min-width: 768px) {
+    .desc{
+        transform: translateY(100%);
+    }
+    .project:hover  .desc{
+        transform: translateY(0);
+    }
+ }

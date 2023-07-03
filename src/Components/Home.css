@@ -1,0 +1,32 @@
+.typed-out{
+    overflow: hidden;
+    
+    border-right: 4px solid #7c3aed;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1s steps(20,end) forwards;
+}
+.porfile-bg{
+    mask-size: cover;
+    mask-image: url(../assets/blob.svg);
+    mask-position: center;
+
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+        border-color: transparent ;
+    }
+}
+@keyframes blink {
+    from{
+        border-color: transparent;
+    }
+    to{
+        border-color: #7c3aed;
+        
+    }
+}

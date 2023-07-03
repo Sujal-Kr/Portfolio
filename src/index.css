@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+div{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,label{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #7c3aed7c;
+    border-radius: 12px;
+}
