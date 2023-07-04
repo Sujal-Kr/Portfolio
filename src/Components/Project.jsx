@@ -43,7 +43,7 @@ function Project() {
       <div className="project-list  flex flex-wrap gap-1 justify-center  my-12 sm:px-4 lg:px-40 ">
         {
           project.map((item,index)=>(
-            <div className="project w-80  p-3 relative overflow-hidden" key={index}onClick={()=>handleLink(index)} data-aos="zoom-in" data-aos-duration="2000" >
+            <div className="project w-80  p-3 relative overflow-hidden" key={index}onClick={()=>handleLink(index)} data-aos="fade-up" data-aos-duration="2000" >
               <img src={item.image} alt="" />
               <div className="desc absolute h-full w-full top-0 left-0 flex justify-center items-center flex-col ">
                 <h4 className='text-2xl text-white'>{item.title}</h4>

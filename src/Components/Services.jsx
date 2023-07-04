@@ -18,7 +18,7 @@ function Services() {
       </div>
       <div className="service-list  gap-8 grid my-12 lg:px-32">
 
-        <div className="service    px-5 py-4  " data-aos="zoom-out" data-aos-duration="500" data-aos-delay="100">
+        <div className="service    px-5 py-4  " data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
             
             <div className="icon-cont">
               <DiReact size={50} color='#7c3aed'/>
@@ -26,14 +26,14 @@ function Services() {
             <h3 className='text-2xl my-1'>Web Development</h3>
             <p>Web development refers to the process of building websites and web applications. It involves a combination of programming, design,   and other technical skills to create functional and interactive websites. </p>
         </div>
-        <div className="service    px-5 py-4  " data-aos="zoom-out" data-aos-duration="500" data-aos-delay="200">
+        <div className="service    px-5 py-4  " data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
             <div className="icon-cont">
               <AiOutlineMobile size={50} color='#7c3aed'/>
             </div>
             <h3 className='text-2xl my-1 '>Responsiveness</h3>
             <p>Responsive design creates websites that adapt to different screen sizes and devices, ensuring accessibility and usability across various resolutions for an optimal user experience and improved engagement.</p>
         </div>
-        <div className="service    px-5 py-4  " data-aos="zoom-out" data-aos-duration="500" data-aos-delay="300">
+        <div className="service    px-5 py-4  " data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
             <div className="icon-cont ">
               <DiCodeBadge size={50} color='#7c3aed'/>  
             </div>

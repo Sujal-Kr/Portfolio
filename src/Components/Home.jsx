@@ -22,7 +22,7 @@ function Home() {
               <Link to='contact_id'spy={true} smooth={true} offset={-100} duration={100}>Hire Me</Link>
             </button>
       </div>
-      <div className="porfile-bg lg:w-[50%] relative bg-violet-600 " data-aos="fade-up"  data-aos-duration="1000">
+      <div className="porfile-bg lg:w-[50%] relative bg-violet-600 " >
           <img src={profile} alt="" className='' />
       </div>
       <div className="social-cont flex absolute bottom-8 left-4  md:flex-col ">
