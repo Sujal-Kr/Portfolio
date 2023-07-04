@@ -2,8 +2,11 @@ import React,{useState}from 'react'
 import {FaHamburger} from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import {MdClose} from 'react-icons/md'
+
+
 import './Navbar.css'
 function Navbar() {
+  
   const [mode,setMode]=useState(false)
   return (
     <div className='flex items-center justify-between p-3  lg:px-12 lg:py-4 fixed top-0 left-0 w-full bg-white z-20 '>

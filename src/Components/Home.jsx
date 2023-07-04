@@ -1,9 +1,16 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Home.css'
 import { Link } from 'react-scroll'
 import profile from '../assets/profile.png'
 import {AiOutlineInstagram,AiOutlineLinkedin,AiFillGithub} from 'react-icons/ai'
+import aos from 'aos'
+import 'aos/dist/aos.css'
+
 function Home() {
+  useEffect(() =>{
+    aos.init()
+  })
+
   return (
     <div className='home-cont h-screen  px-4 flex-col sm md:flex-row md:pl-32 flex justify-center items-center relative  ' id='home'>
       <div className="content"> 
@@ -15,7 +22,7 @@ function Home() {
               <Link to='contact_id'spy={true} smooth={true} offset={-100} duration={100}>Hire Me</Link>
             </button>
       </div>
-      <div className="porfile-bg lg:w-[50%] relative bg-violet-600 ">
+      <div className="porfile-bg lg:w-[50%] relative bg-violet-600 " data-aos="fade-up"  data-aos-duration="1000">
           <img src={profile} alt="" className='' />
       </div>
       <div className="social-cont flex absolute bottom-8 left-4  md:flex-col ">

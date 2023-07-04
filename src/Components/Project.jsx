@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import rest from '../assets/rest.svg'
 import shop from '../assets/shopping.svg'
 import hospital from '../assets/hospital.svg'
@@ -6,8 +6,12 @@ import company from '../assets/company.svg'
 import insta from '../assets/insta.svg'
 import resume from '../assets/resume.svg'
 import './Project.css'
+import aos from 'aos'
+import 'aos/dist/aos.css'
 function Project() {
-  
+  useEffect(()=>{
+    aos.init()
+  })
   let data=[{title:"Canteen Website",desc:"Online Canteen Manangement System.Both FrontEnd and BackEnd Integrated",image:rest,type:"personal",link:"https://wondrous-strudel-7a7820.netlify.app/"},{title:"Resume Builder",desc:"Classic Example of Redux Toolkit and Firebase Integration",image:resume,type:"personal"},{title:"Instagram Clone",desc:"Instagram Reels clone with the use of firebase, redux and intersection API",image:insta,type:"personal",link:"https://clever-horse-896f5b.netlify.app/login"},{title:"It Firm Webstite",desc:"A React based Website for DigiSoulTech Pvt Ltd.",image:company,type:"client",link:"https://649551f249d2ee037b95c69f--bright-strudel-6aa0d1.netlify.app/"},{title:"Shopping Cart",desc:"Redux Toolkit",image:shop,type:"personal",link:"https://legendary-halva-2b0e8f.netlify.app/"},{title:"Hospital Website",desc:"Developed a React Website for Shre Ganesh Eye Hospital",image:hospital,type:"client",link:"https://poetic-pasca-1d56bc.netlify.app/"}]
 
 
@@ -39,7 +43,7 @@ function Project() {
       <div className="project-list  flex flex-wrap gap-1 justify-center  my-12 sm:px-4 lg:px-40 ">
         {
           project.map((item,index)=>(
-            <div className="project w-80  p-3 relative overflow-hidden" key={index}onClick={()=>handleLink(index)}>
+            <div className="project w-80  p-3 relative overflow-hidden" key={index}onClick={()=>handleLink(index)} data-aos="zoom-in" data-aos-duration="2000" >
               <img src={item.image} alt="" />
               <div className="desc absolute h-full w-full top-0 left-0 flex justify-center items-center flex-col ">
                 <h4 className='text-2xl text-white'>{item.title}</h4>
