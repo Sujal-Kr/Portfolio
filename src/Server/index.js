@@ -1,10 +1,11 @@
-import express from 'express';
-
+import express from 'express'
+import cors from 'cors'
 import registerMail from './mail.js'
 
 const app = express()
-
-const PORT =  8080
+app.use(cors())
+app.use(express.json())
+const PORT =  8000
 
 app.post("/",registerMail)
 app.listen(PORT,()=>{

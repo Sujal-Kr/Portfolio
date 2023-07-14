@@ -25,7 +25,8 @@ const mailGenerator = new mailGen({
 
 
 const registerMail = async (req, res)=>{
-    const {name,mail,msg} =  req.body;
+    console.log(req.body);
+    const {name,mail,msg}=req.body
     // Body of the email request
     let email = {
         body:{
@@ -41,7 +42,7 @@ const registerMail = async (req, res)=>{
 
     const message = {
         from:process.env.EMAIL,
-        to:values.email,
+        to:email,
         subject : "Appointment",
         html:emailBody
     }
@@ -52,10 +53,12 @@ const registerMail = async (req, res)=>{
     try{
 
         const info = await transporter.sendMail(message)
+        console.log(info.messageId)
         res.status(200).json({success:true,message:info.messageId})
 
     }
     catch(err){
+        console.error(err.message)
         res.status(400).json({
             success:false,
             message:err.message

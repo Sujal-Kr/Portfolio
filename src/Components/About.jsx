@@ -1,13 +1,18 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import pic from '../assets/pic.webp'
 import {BsDownload} from 'react-icons/bs'
 import resume from '../Resume/sujal.pdf'
 import './About.css'
+import aos from 'aos'
+import 'aos/dist/aos.css'
 function About() {
+    useEffect(()=>{
+        aos.init()
+    })
   return (
     <div className='about-cont grid grid-cols-1 my-12 gap-16 md:grid-cols-2 lg:px-20 sm:px-2' id='about_id' >
-        <div className="image-cont px-10 flex justify-center ">
-            <img src={pic} alt="My image " className='my-image lg:h-3/4 sm:object-cover ' />
+        <div className="image-cont px-10 flex justify-center " >
+            <img src={pic} alt="My image " className='my-image lg:h-3/4 sm:object-cover ' data-aos="fade-down" data-aos-durtation="2000"/>
         </div>
         <div className="bio-cont px-4 ">
             <h3 className='text-3xl text-violet-600'>About Me</h3>
