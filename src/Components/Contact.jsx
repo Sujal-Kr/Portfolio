@@ -13,7 +13,15 @@ function Contact() {
     const [msg,setMsg] = useState('')
     
     const handleSubmit = async () => {
-       
+        const data=await axios({
+            method: 'POST',
+            url: 'http://localhost:8000/',
+            data: {
+                name,
+                mail,
+                msg,
+            }
+        })
         console.log(data)
         toast.success('message sent!', {
             position: toast.POSITION.TOP_RIGHT,

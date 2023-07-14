@@ -6,17 +6,27 @@ import Project from './Components/Project'
 import Contact from './Components/Contact'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
+import Portfolio from './Components/Portfolio'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Services/> 
-      <Project/>
-      <Contact/>
-      <Footer/>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path='/'exact element={<>
+            <Navbar/>
+            <Home/>
+            <About/>
+            <Services/> 
+            <Project/>
+            <Contact/>
+            <Footer/>
+          </>}>
+          </Route>
+          <Route path='/portfolio/:id' exact element={<Portfolio/>}></Route>
+        </Routes>
+      </Router>
+    </>
   )
 }
 
