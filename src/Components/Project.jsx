@@ -1,11 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import rest from '../assets/rest.svg'
-import shop from '../assets/shopping.svg'
-import hospital from '../assets/hospital.svg'
-import company from '../assets/company.svg'
-import insta from '../assets/insta.svg'
-import resume from '../assets/resume.svg'
 import './Project.css'
 import aos from 'aos'
 import 'aos/dist/aos.css'
@@ -60,7 +54,6 @@ function Project() {
             </div>
           ))
         }
-        
       </div>
     </div>
   )

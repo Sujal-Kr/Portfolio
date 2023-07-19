@@ -5,16 +5,34 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import {BsChevronDoubleLeft} from 'react-icons/bs'
 import {GiCheckMark} from 'react-icons/gi'
+import {IoIosArrowBack} from 'react-icons/io'
+import {IoIosArrowForward} from 'react-icons/io'
+import { pro_data } from '../Projects'
 function Portfolio() {
   const navigate=useNavigate()
-
+  const data=pro_data
   const [project,setProject] = useState(null)
-  const data=useLocation()
+  const item=useLocation()
+  const {id}=item.state
+  const [curr,setCurr] = useState(id)
   useEffect(()=>{
-    setProject(data.state)
-  },[])
+    setProject(data[curr])
+  },[curr])
   const handleHome=()=>{
     navigate('/')
+  }
+  const handelPrev=()=>{
+    if(curr===0)return
+    let count=curr
+    count--
+    setCurr(count)
+    
+  }
+  const handleNext=()=>{
+    let count=curr
+    count++
+    count%=6
+    setCurr(count)
   }
  
   
@@ -51,6 +69,14 @@ function Portfolio() {
               ))
              }
           <button className='text-lg px-4 py-1 my-8 border-solid border-violet-600 border-2 shadow-sm  hover:bg-violet-600 hover:text-white duration-300'><Link to={project.link} target='_blank'>Visit Site</Link></button>
+        <div className="action-cont flex text-3xl gap-3 ">
+          <div onClick={handelPrev} className="hover:bg-violet-400  hover:text-white rounded-full p-1 group ease-linear duration-300">
+            <IoIosArrowBack   className='  cursor-pointer'/>
+          </div>
+          <div onClick={handleNext} className='hover:bg-violet-400  hover:text-white rounded-full p-1 group ease-linear duration-300'>
+            <IoIosArrowForward  className='  cursor-pointer' />
+          </div>
+        </div>
         </div>
       </div>
      }
