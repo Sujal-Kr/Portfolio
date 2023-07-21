@@ -41,7 +41,7 @@ function Portfolio() {
       <div onClick={handleHome} className="text-3xl absolute top-5 md:left-5 left-2 hover:text-white hover:bg-violet-300 rounded-[50%] duration-300 ease-linear  p-2">
         <BsChevronDoubleLeft/>
       </div>
-      <h1 className='text-5xl border-l-4 border-violet-600'>My Projects</h1>
+      <h1 className='lg:text-5xl text-2xl pl-1 border-l-4 border-violet-600'>My Projects</h1>
      {
       project===null?<div className='grid md:grid-cols-2 my-4 gap-8'>
         <div className="bg-slate-100 h-[60vh] rounded-sm  animate-pulse"></div>
@@ -57,15 +57,15 @@ function Portfolio() {
       </div>:
       <div className='grid grid-cols-1 py-10 md:grid-cols-2 gap-8 '>
         <div className="img-cont lg:p-4">
-          <img src={project.image} alt="" />
+          <img src={project.image} alt="" className='drop-shadow-lg'/>
         </div>
         <div className="">
-          <h3 className='text-3xl '>{project.title}</h3>
+          <h3 className='text-3xl  border-b-2 border-solid border-violet-600 pb-2'>{project.title}</h3>
           <p className='max-w-md text-lg my-2'>{project.desc}</p>
           <h4 className='text-xl text-violet-600'>Key Features</h4>
              {
-              project.bullets.map(point=>(
-                <li className='list-none flex items-center gap-2'><GiCheckMark color='#7c3aed'/>{point}</li>
+              project.bullets.map((point,index)=>(
+                <li key={index} className='list-none flex items-center gap-2'><GiCheckMark color='#7c3aed'/>{point}</li>
               ))
              }
           <button className='text-lg px-4 py-1 my-8 border-solid border-violet-600 border-2 shadow-sm  hover:bg-violet-600 hover:text-white duration-300'><Link to={project.link} target='_blank'>Visit Site</Link></button>
